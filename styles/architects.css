@@ -15,7 +15,7 @@
   display: flex;
 }
 
-.dark-1 {
+.dark-1, .details-title, .header-title {
   color: rgb(19, 19, 19);
 }
 .dark-2 {
@@ -41,7 +41,7 @@ main {
 }
 
 main > section {
-  margin-top: 90px;
+  margin-top: 130px;
 }
 
 /* header styles */
@@ -108,7 +108,7 @@ main > section {
   max-width: 530px;
 }
 
-.feature-title {
+.feature-title, .header-title{
   font-size: 2.8rem;
   font-weight: 700;
   color: rgb(19, 19, 19);
@@ -124,12 +124,52 @@ main > section {
   margin-bottom: 32px;
 }
 
+/* extra feature content style */
+#title {
+    border-left: 5px solid rgb(255, 144, 14);
+    padding-left: 21px;
+}
+.details-title{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.feature-details {
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  padding: 30px 42px 30px 30px;
+  gap: 20px;
+}
+.extra-feature-image img {
+  max-width: 705px;
+  max-height: 980px;
+  margin: 0 0 0 140px;
+}
+
+.secondary-btn {
+  border-radius: 8px;
+  border: none;
+  padding: 46px 42px;
+  background: rgb(255, 144, 14);
+  margin-top: -123px;
+  color: rgb(255, 255, 255);
+  margin-left: 54px;
+}
+.year {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.experience {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .features-container {
+  .features-container, .extra-feature-container {
     flex-direction: column;
   }
   .nav-links {
@@ -143,13 +183,30 @@ main > section {
   .feature-content {
     margin: 40px 20px;
   }
+  .extra-feature-image img {
+    max-width: 100%;
+    margin: 0;
+  }
+  .secondary-btn {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .features-container {
+  .features-container, .extra-feature-container {
     flex-direction: column;
   }
   .feature-content {
     margin: 50px auto;
   }
+  .extra-feature-image img {
+    max-width: 100%;
+    margin-left: 50px;
+  }
+  .secondary-btn {
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+
 }
